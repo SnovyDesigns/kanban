@@ -1,4 +1,36 @@
 /* Note styles */
 .Note {
-  
+  background-color: rgba(245, 246, 250,1.0);
+  margin: 10px 0;
+  padding: 7px;
+  border: 1px solid rgba(53, 59, 72, .2);
+  transition: all .4s ease;
+}
+
+.Note:hover {
+  border: 1px solid rgba(53, 59, 72, .4);
+}
+
+.Note div div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Note span {
+  color: rgba(39, 60, 117,1.0);
+}
+
+.Note button {
+  border: none;
+  background-color:rgba(113, 128, 147, .3);
+  color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  transition: all .4s ease;
+}
+
+.Note button:hover {
+  background-color:rgba(113, 128, 147, .7);
+  cursor: pointer;
 }

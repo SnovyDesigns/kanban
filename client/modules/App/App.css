@@ -1,6 +1,11 @@
+.wrapper {
+  background-color: #0097e6;
+}
+
 .container {
   max-width: 980px;
   width: 100%;
   padding: 15px;
   margin: 0 auto;
+  height: calc(100vh - 80px);
 }

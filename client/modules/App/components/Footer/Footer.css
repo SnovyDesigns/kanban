@@ -1,17 +1,15 @@
-.footer{
-  text-align: center;
-  padding: 56px 0;
-  background-size: cover;
+.Footer{
+  background: #192a56;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #b0b1b1;
 }
 
-.footer p{
-  margin: 0 0 8px 0;
-  font-size: 14px;
-  color: #FFF;
+.Footer p {
+  font-size: 16px;
+  color: #f5f6fa;
 }
 
-.footer a{
-  color: #FFF;
-  text-decoration: none;
-  font-weight: 700;
-}
+

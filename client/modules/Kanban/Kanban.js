@@ -5,7 +5,8 @@ import styles from '../Lane/Lane.css';
 import { fetchLanes } from '../Lane/LaneActions';
 
 const Kanban = props => (
-  <div>
+  <div className={styles.LanesContainer}>
+    <Lanes lanes={props.lanes} />
     <button
       className={styles.AddLane}
       onClick={() =>
@@ -14,9 +15,8 @@ const Kanban = props => (
         })
       }
     >
-      Add lane
+      + Add lane
     </button>
-    <Lanes lanes={props.lanes} />
   </div>
 );
 

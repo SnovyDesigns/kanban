@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styles from './Edit.css';
 
 export default class Edit extends Component {
@@ -53,11 +54,11 @@ export default class Edit extends Component {
   }
 }
 
-// Edit.propTypes = {
-//   value: PropTypes.string,
-//   className: PropTypes.string,
-//   onUpdate: PropTypes.func,
-//   onValueClick: PropTypes.func,
-//   onDelete: PropTypes.func,
-//   editing: PropTypes.bool
-// };
+Edit.propTypes = {
+  value: PropTypes.string,
+  className: PropTypes.string,
+  onUpdate: PropTypes.func,
+  onValueClick: PropTypes.func,
+  onDelete: PropTypes.func,
+  editing: PropTypes.bool
+};
