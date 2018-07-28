@@ -5,7 +5,7 @@ import styles from './Notes.css';
 
 const Notes = ({ notes, laneId, editNote, updateNote, deleteNote }) => {
   return (
-    <ul className="notes">
+    <ul className={styles.Notes}>
       {notes.map(note => (
         <Note id={note.id} key={note.id}>
           <Edit
@@ -19,7 +19,7 @@ const Notes = ({ notes, laneId, editNote, updateNote, deleteNote }) => {
                 editing: false
               })
             }
-            onDelete={() => deleteNote(note.id, laneId)}
+            onDelete={() => deleteNote(note, laneId)}
           />
         </Note>
       ))}
@@ -27,12 +27,12 @@ const Notes = ({ notes, laneId, editNote, updateNote, deleteNote }) => {
   );
 };
 
-Notes.propTypes = {
-  deleteNote: PropTypes.func,
-  updateNote: PropTypes.func,
-  laneId: PropTypes.string,
-  editNote: PropTypes.func,
-  notes: PropTypes.array
-};
+// Notes.propTypes = {
+//   deleteNote: PropTypes.func,
+//   updateNote: PropTypes.func,
+//   laneId: PropTypes.string,
+//   editNote: PropTypes.func,
+//   notes: PropTypes.array
+// };
 
 export default Notes;

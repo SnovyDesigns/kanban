@@ -53,11 +53,11 @@ export default class Edit extends Component {
   }
 }
 
-Edit.propTypes = {
-  value: PropTypes.string,
-  className: PropTypes.string,
-  onUpdate: PropTypes.func,
-  onValueClick: PropTypes.func,
-  onDelete: PropTypes.func,
-  editing: PropTypes.bool
-};
+// Edit.propTypes = {
+//   value: PropTypes.string,
+//   className: PropTypes.string,
+//   onUpdate: PropTypes.func,
+//   onValueClick: PropTypes.func,
+//   onDelete: PropTypes.func,
+//   editing: PropTypes.bool
+// };

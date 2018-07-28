@@ -28,10 +28,21 @@ export function addNote(req, res) {
 }
 
 export function deleteNote(req, res) {
+  const { laneId, mongoNoteId } = req.body;
+
+  Lane.findOne({ id: laneId }).then(lane => {
+    const updatedNotes = lane.notes.filter(
+      note => note._id.toString() !== mongoNoteId
+    );
+    lane.notes = updatedNotes;
+
+    return lane.save();
+  });
+
   Note.findOne({ id: req.params.noteId })
     .then(note => {
       note.remove(() => {
-        res.status(200).send({ sucess: true });
+        res.status(200).send({ msg: 'Note deleted' });
       });
     })
     .catch(err => res.status(500).send(err));

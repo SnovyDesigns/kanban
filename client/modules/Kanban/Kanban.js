@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Lanes from '../Lane/Lanes';
 import styles from '../Lane/Lane.css';
+import { fetchLanes } from '../Lane/LaneActions';
 
 const Kanban = props => (
   <div>
@@ -18,6 +19,12 @@ const Kanban = props => (
     <Lanes lanes={props.lanes} />
   </div>
 );
+
+Kanban.need = [
+  () => {
+    return fetchLanes();
+  }
+];
 
 Kanban.propTypes = {
   lanes: PropTypes.array,

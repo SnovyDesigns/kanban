@@ -32,13 +32,13 @@ const Lane = props => {
   );
 };
 
-Lane.propTypes = {
-  lane: PropTypes.object,
-  laneNotes: PropTypes.array,
-  addNote: PropTypes.func,
-  updateLane: PropTypes.func,
-  deleteLane: PropTypes.func,
-  editLane: PropTypes.func
-};
+// Lane.propTypes = {
+//   lane: PropTypes.object,
+//   laneNotes: PropTypes.array,
+//   addNote: PropTypes.func,
+//   updateLane: PropTypes.func,
+//   deleteLane: PropTypes.func,
+//   editLane: PropTypes.func
+// };
 
 export default Lane;

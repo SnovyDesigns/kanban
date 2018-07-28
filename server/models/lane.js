@@ -30,5 +30,6 @@ function populateNotes(next) {
 
 laneSchema.pre('find', populateNotes);
 laneSchema.pre('findOne', populateNotes);
+laneSchema.pre('findOneAndUpdate', populateNotes);
 
 export default mongoose.model('Lane', laneSchema);

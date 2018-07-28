@@ -37,9 +37,15 @@ export function updateLane(laneId, lane) {
   };
 }
 
-export function updateLaneRequest(laneId, lane) {
+export function updateLaneRequest(lane) {
+  const { id: laneId } = lane;
+
   return dispatch => {
-    return callApi(`lanes/:${laneId}`, 'put', lane.name).then(laneResp => {
+    return callApi(`lanes/${laneId}`, 'put', lane).then(laneResp => {
+      const correctNotes = [];
+      laneResp.notes.forEach(note => correctNotes.push(note.id));
+      laneResp.notes = correctNotes;
+
       dispatch(updateLane(laneId, laneResp));
     });
   };
@@ -54,7 +60,7 @@ export function deleteLane(laneId) {
 
 export function deleteLaneRequest(laneId) {
   return dispatch => {
-    return callApi(`lanes/:${laneId}`, 'delete').then(res => {
+    return callApi(`lanes/${laneId}`, 'delete').then(res => {
       dispatch(deleteLane(laneId));
     });
   };
